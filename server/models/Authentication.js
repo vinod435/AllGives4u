@@ -1,6 +1,7 @@
 const db=require('../dbConnection');
 const curd=require('./curd')
 const Authentication={
+    
 signUp:(data,callback)=>{
     const Table='USERS';
     const Columns=['User_FirstName','User_LastName','User_Email','User_PhoneNo','User_Password'];

@@ -10,11 +10,8 @@ router.post('/signup',function(req,res){
         else{
             res.json(err)
         }
-        
     })
 })
-
-
 router.post('/signin',function(req,res){
     Authentication.signIn(req.body,function(row,err){
         if(row){

@@ -1,9 +1,5 @@
-import {createStore,applyMiddleware,compose} from 'redux';
-import createSagaMiddleware from 'redux-saga'  
-import IntialReducer from '../src/components/Authentication/signIn/reducer';
-import IntialSaga from '../src/components/Authentication/signIn/saga'
-const sagaMiddleware = createSagaMiddleware()
+import {createStore} from 'redux'
+import {Reducer}from './containers/Products/Reducer'
 
-export const store=createStore(IntialReducer,applyMiddleware(sagaMiddleware))
 
-sagaMiddleware.run(IntialSaga)
+export const Store=createStore(Reducer)
